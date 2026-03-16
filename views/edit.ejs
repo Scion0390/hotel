@@ -1,0 +1,73 @@
+<% layout("layouts/boilerplate") %>
+<main class="container">
+     <div class="dcr row col-sm-6 col-md-6 col-lg-5 offset-3">
+            <form method="post" action="/aftedit/<%=user.id%>?_method=PUT" class="row g-3 needs-validation" novalidate enctype="multipart/form-data">
+                <div>
+                    <label for="n" class="form-label">  Name: </label>
+                        <input type="text" value="<%=user.title%>" id="n" name="title" required class="form-control">
+                            <div class="valid-feedback">
+                                <b> Looks good! </b>
+                            </div>
+                            <div class="invalid-feedback">
+                                <b> Please enter the Title! </b>
+                            </div>
+                </div>
+                    <div>     
+                        <label for="t" class="form-label">  Time: </label>
+                            <input type="text" value="<%=user.time%>" id="t" name="time" required class="form-control">
+                                <div class="valid-feedback">
+                                    <b> Looks good! </b>
+                                </div>
+                                    <div class="invalid-feedback">
+                                        <b> Please choose the Time! </b>
+                                    </div>
+                    </div>
+                        <div>
+                            <label for="p" class="form-label">  Price: </label>
+                                <input type="text" value="<%=user.price%>" id="p" name="price" required class="form-control">
+                                       <div class="valid-feedback">
+                                            <b> Looks good! </b>
+                                        </div>
+                                            <div class="invalid-feedback">
+                                                <b> Please enter a Price! </b>
+                                            </div>
+                        </div>
+                            <div>     
+                                <label for="l" class="form-label">  Location: </label>
+                                    <input type="text" value="<%=user.location%>" id="l" name="location" required class="form-control">
+                                        <div class="valid-feedback">
+                                            <b> Looks good! </b>
+                                        </div>
+                                            <div class="invalid-feedback">
+                                                <b> Please enter the Location! </b>
+                                            </div>
+                            </div>
+                                <div>    
+                                    <label for="i" class="form-label">  Info: </label>
+                                            <input type="text" value="<%=user.info%>" id="i" name="info" required class="form-control">
+                                                <div class="valid-feedback">
+                                                    <b> Looks good! </b>
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    <b> Please enter the Information! </b>
+                                                </div>
+                                </div>
+                                    <div>     
+                                        <div class="col-4 offset-2">
+                                            <img src="<%=user.img.url%>" height="250px" width="350px">
+                                        </div>
+                                        <label for="im" class="form-label"> Image: </label>
+                                            <input type="file" value="<%=user.img%>" id="im" name="img" class="form-control">
+                                                <div class="valid-feedback">
+                                                    <b> Looks good! </b>
+                                                </div>
+                                                    <div class="invalid-feedback">
+                                                        <b> Please choose an Image! </b>
+                                                    </div>
+                                    </div>
+
+                                        <button class="btn btn-danger col-3 offset-4"> Submit </button>
+
+            </form>
+     </div>        
+</main>

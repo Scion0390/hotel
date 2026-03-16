@@ -1,0 +1,231 @@
+*{
+    box-sizing: border-box;
+    font-family: serif;
+}
+body{
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0;
+    background-color: #bbb;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+    padding-top: 50px;
+    padding-bottom: 55px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+#nv{
+    background-color: #acabab;
+    box-sizing: border-box;
+}
+
+#abc{
+    width: 100%;
+    display: flex ;
+    justify-content: space-evenly ;
+    align-items: center ;  
+}
+
+.na{
+    text-decoration: none;
+    color: #000;
+}
+
+footer{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#foter{
+    height:100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #acabab;
+    border-bottom: 1px solid #bbb;
+}
+
+#suport{
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+#airbnb{
+    margin-right: 320px;
+    margin-top: 10px;
+}
+
+#hosting{
+    margin-top: 10px;
+}
+
+.fat{
+    text-decoration: none;
+    color: #000;
+}
+
+#foter2{
+    height:120px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #acabab;
+}
+
+
+.f1a{
+    text-decoration: none;
+    color: #000;
+}
+
+#f1{
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+#f2{
+    width: 300px;
+     display: flex;
+     justify-content: space-between;
+     margin-right: 50px;
+     margin-top: 30px;
+}
+
+.card-img-top{
+    border-radius: 20px;
+}
+
+#hmn{
+    justify-content: space-around;
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+
+.card{
+    margin: 20px;
+    border-radius: 20px;
+    background-color: #bbb;
+    box-shadow: 5px 5px 10px 5px  #666565;
+}
+
+.ma{
+    text-decoration: none;
+    color: #000;
+}
+
+#shmn{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+} 
+
+#ah{
+    margin: 15px;
+}
+
+.dcr{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    box-shadow: 5px 5px 10px 5px  #666565;
+}
+
+#psub{
+    text-align: center;
+}
+
+#mded   {
+    display: flex;
+    justify-content: center;
+}
+
+#ded{
+    height:max-content;
+    width: 500px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 5px 5px 10px 5px  #666565;
+}
+
+#edpsub{
+    text-align: center;
+}
+
+.ped{
+    display: flex;
+    justify-content: center;
+}
+
+
+.btns{    
+    display: flex;
+}
+
+.btns>form,a{
+    margin-left: 10px;
+}
+
+#mer{
+    display: flex;
+    justify-content: center;
+}
+
+#er{
+    height:max-content;
+    width: max-content;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 5px 5px 10px 5px  #666565;
+    font-size: x-large;
+}
+
+.btn{
+    font-size: large;
+    margin-top: 20px;
+}
+
+.ab{
+    background-image: url("https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=");
+    background-size: contain;
+}
+
+#cmnt{
+    width: 25vw;
+    height: 30vh;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+#review{
+    width: 85vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-left: 20px;
+}
+
+.emp{
+    width: auto;
+    font-size: xx-large;
+    padding: 20px;
+    box-shadow: 5px 5px 10px 5px  #666565;
+}

@@ -1,0 +1,62 @@
+<% layout("layouts/boilerplate") %>
+<style>
+    #comment{
+        resize: both;
+        overflow: auto;
+    }
+</style>
+<main class="container">
+    <div class="row col-6 offset-3">
+        <img src="<%=users.img.url%>" height="300px" width="400px" alt="img"><br><br>
+   
+            <p> 
+                Name: <%=users.title%>   
+            </p>
+                <p> 
+                    Location: <%= users.location %> 
+                </p>
+                    <p> 
+                        Price: <%= users.price.toLocaleString("en-in")%> For <%= users.time %> 
+                    </p>
+                        <p> 
+                            Provides <%= users.info %> 
+                        </p>
+    </div>
+    
+    <div id="cols-8 offset-3">
+        <hr/>
+        <h4>Leave a Review</h4>
+        <form method="post" action="/user/<%= users._id %>/reviews" class="needs-validation" novalidate>
+            <div>
+                <label for="rating">Rating</label>
+                <input type="range" min="1" max="5" id="rating" name="rating" class="form-range" required> 
+            </div>
+                <div>
+                    <label for="comment" class="form-label">Comment</label>
+                    <textarea name="comment" id="comment" cols="10" rows="5" class="form-control mb-3" required> </textarea>
+                        <div class="invalid-feedback">
+                            Please enter some feedback
+                        </div>
+                </div>
+            <button class="btn btn-outline-dark">Submit</button>
+        </form>
+    </div>
+    <br>
+    <div id="review">
+        <% for(let review of reviews){ %>
+             <div class="col-4">
+                <div id="cmnt">
+                Rating: <%= review.rating %> <br>
+                Comment: <%= review.comment %>
+                </div>
+                <form method="post" action="/user/<%=users._id%>/reviews/<%=review._id%>?_method=DELETE">
+                            
+            <%if(currUser && currUser._id.toString() === users.owner.toString()){%>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+            <%}%>
+                </form>
+                <br>
+             </div>
+        <%}%>
+    </div>
+</main>

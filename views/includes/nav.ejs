@@ -1,0 +1,45 @@
+    <nav class="navbar navbar-expand-lg  sticky-top" id="nv">
+        <div class="container-fluid">
+            <div id="logo">
+                <img src="/logo.png" height="100px" width="100px">
+            </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                    <div class="navbar-nav " id="abc">
+                                        <a href="/home" class="na">
+                                            Home
+                                        </a>
+                                            <a href="#" class="na">
+                                                Experiences 
+                                            </a>
+                                                <a href="#" class="na">
+                                                    Services 
+                                                </a>
+                                                    <a href="/login" class="na">
+                                                        Become a Host 
+                                                    </a>
+                                                        <% if(!currUser){%>
+                                                            <a href="/login" class="na">
+                                                                Login 
+                                                            </a>
+                                                                <a href="/signup" class="na">
+                                                                    Signup 
+                                                                </a>        
+                                                            <%}%>
+                                                                <% if(currUser){%>
+                                                                    <a href="/Post/<%= currUser._id %>" class="na">
+                                                                        My Post's 
+                                                                    </a>
+                                                                        <a href="/create" class="na"> 
+                                                                            Add Post
+                                                                        </a>
+                                                                            <a href="/logout" class="na">
+                                                                                Logout
+                                                                            </a>
+                                                                <%}%>
+                                    </div>
+                                </div>
+        </div>
+    </nav>
