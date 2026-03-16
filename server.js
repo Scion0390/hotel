@@ -1,7 +1,7 @@
 require("dotenv").config();
-
 const express= require("express");
 const app= express();
+app.set("trust proxy", 1);
 const port= process.env.PORT || 3000;
 const path= require("path");
 const data= require("./models/user.js");
@@ -39,10 +39,11 @@ app.use(session({
         mongoUrl:DB,
         ttl:14*24*60*60,
     }),
+    proxy:true,
     cookie:{
-            http: true,
+            httpOnly: true,
             secure: process.env.NODE_ENV ==="production",
-            samesite:"lax",
+            samesite: "lax",
             maxAge: 1000*60*60*24, 
         },
 }));
