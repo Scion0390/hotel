@@ -1,8 +1,9 @@
 require("dotenv").config();
 const express= require("express");
 const app= express();
-app.set("trust proxy", 1);
-const port= process.env.PORT || 3000;
+const port=3000
+//app.set("trust proxy", 1);
+//const port= process.env.PORT || 3000;
 const path= require("path");
 const data= require("./models/user.js");
 const mo= require("method-override");
@@ -35,7 +36,7 @@ app.use(session({
     secret:"this is the secret",
     resave:false,
     saveUninitialized:false,
-    store:mongoStore.create({
+    /*store:mongoStore.create({
         mongoUrl:DB,
         ttl:14*24*60*60,
     }),
@@ -45,7 +46,7 @@ app.use(session({
             secure: process.env.NODE_ENV ==="production",
             samesite: "lax",
             maxAge: 1000*60*60*24, 
-        },
+        },*/
 }));
 
 app.use(passport.initialize())
