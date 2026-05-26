@@ -229,3 +229,18 @@ footer{
     padding: 20px;
     box-shadow: 5px 5px 10px 5px  #666565;
 }
+
+.eye{
+    position: relative;
+}
+
+.eye input{
+    width: 100%;
+}
+
+.eye_btn{
+    position: relative;
+    left: 92%;
+    bottom: 20px;
+    transform: translateY(-50%);
+}
