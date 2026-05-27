@@ -18,6 +18,7 @@ const {valid, reviewSchema} = require("./schema.js");
 const Review = require("./models/review.js")
 const page = require("./routes/page.js")
 const user = require("./routes/user.js");
+mongoose.set('strictQuery', true);
 const DB = process.env.DB
 console.log(DB)
 
