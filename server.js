@@ -41,7 +41,6 @@ app.use(session({
         mongoUrl:DB,
         ttl:14*24*60*60,
     }),
-    proxy:true,
     cookie:{
             httpOnly: true,
             secure: process.env.NODE_ENV ==="production",
