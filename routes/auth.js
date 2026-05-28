@@ -47,7 +47,7 @@ router.post("/signup",async(req,res,next)=>{
 
     console.log(`OTP sent to ${email}: ${otp}`);
 
-    res.redirect("/verification");
+    res.render("verify.ejs");
 
   } catch (err) {
     console.log(err);
@@ -55,10 +55,6 @@ router.post("/signup",async(req,res,next)=>{
   }
     
 });
-
-router.get("/verification",(req,res)=>{
-    res.render("verify.ejs");
-})
 
 router.post("/verify",async (req,res)=>{
 try {
