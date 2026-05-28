@@ -7,15 +7,25 @@ const generateOTP = ()=>{
 //SMTP = Simple Mail Transfer Protocol
 
 const transporter = nodemailer.createTransport({
-    host:"smtp-relay.brevo.com",
-    port:587,
-    secure:false,
-    auth:{
-        user:process.env.BREVO_EMAIL,
-        pass:process.env.BREVO_SMPT_KEY
-    }
-})
+  host: "smtp-relay.brevo.com",
+  port: 2525,
+  secure: false,
+  auth: {
+    user: process.env.BREVO_SMTP_USER,
+    pass: process.env.BREVO_SMTP_KEY
+  },
+  tls: {
+    rejectUnauthorized: false
+  },
+  connectionTimeout: 10000,
+  greetingTimeout: 10000,
+  socketTimeout: 10000
+});
 
+transporter.verify()
+  .then(() => console.log("SMTP READY"))
+  .catch(err => console.log("SMTP FAILED:", err));
+  
 const sendEmail = async(email,otp)=>{
     try{
         const info = await transporter.sendMail({
